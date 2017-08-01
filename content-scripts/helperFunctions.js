@@ -25,7 +25,11 @@ function imageItemOutput(item) {
 
 function countFileTypes(list) {
 	var data = "";
-	var itemArray = {};
+	var dataArray = {
+			image : [],
+			html : [],
+			other : []
+	};
 	var otherArray = [];
 	var htmlArray = [];
 	var imageArray = [];
@@ -35,15 +39,13 @@ function countFileTypes(list) {
 		var ext = getFileExtension(filename);
 		switch (ext) {
 		case "image":
-			itemArray.image.push(item.href);
+			dataArray.image.push(item.href);
 			imageArray.push(item.href);
 			break;
 		case "html":
-			itemArray.html.push(item.href);
 			htmlArray.push(item.href);
 			break;
 		case "other":
-			itemArray.other.push(item.href);
 			otherArray.push(item.href);
 			break;
 		default:
@@ -51,8 +53,7 @@ function countFileTypes(list) {
 		}
 	});
 	data += "File Count:\nImages: " + imageArray.length + "\nHtml: " + htmlArray.length + "\nOther/Unknown: " + otherArray.length;
-	console.log(itemArray);
-	return data;
+	return dataArray;
 }
 
 function getFileExtension(filename) {
@@ -60,7 +61,7 @@ function getFileExtension(filename) {
 		return "other";
 	};
 	var ext = (/[.]/.exec(filename)) ? /[^.]+$/.exec(filename) : undefined;
-	switch (ext.toString().toLowerCase()) {
+	switch (ext.toString()) {
 	case "jpg":
 	case "png":
 	case "gif":
