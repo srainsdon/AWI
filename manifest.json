@@ -2,12 +2,12 @@
 
   "manifest_version": 2,
   "name": "Augmented Web Indexing",
-  "version": "0.1",
+  "version": "0.2",
 
   "description": "The perpus of this add-on is to augment the boring folder index page",
 
   "icons": {
-    "48": "icons/beasts-48.png"
+    "48": "icons/Folder_48x48.png"
   },
 
   "permissions": [
