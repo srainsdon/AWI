@@ -16,13 +16,19 @@
 
   "content_scripts": [
     {
-      "matches": ["*://www.eblifeguard.org/image/"],
+      "matches": [
+        "*://www.eblifeguard.org/image/",
+        "*://newgalleries.fetishsphere.com/*",
+        "*://institute.blacksteel.com/images/*",
+        "*://www.nickscipio.com/*"
+      ],
       "css": [
         "bootstrap/bootstrap.min.css"
       ],
       "js": [
         "bootstrap/jquery.min.js",
         "bootstrap/bootstrap.min.js",
+	"content_scripts/helperFunctions.js",
         "main.js"
       ]
     }
