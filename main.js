@@ -1,4 +1,4 @@
 var srcList = $('a').map(function() {
-    return this.src;
+    return this.href;
 }).get();
-console.log(srcList);
+console.log("Link List:\n" + srcList);
