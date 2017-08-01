@@ -28,7 +28,7 @@
       "js": [
         "bootstrap/jquery.min.js",
         "bootstrap/bootstrap.min.js",
-	"content_scripts/helperFunctions.js",
+		"content-scripts/helperFunctions.js",
         "main.js"
       ]
     }
