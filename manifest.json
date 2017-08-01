@@ -1,0 +1,28 @@
+{
+
+  "manifest_version": 2,
+  "name": "Augmented Web Indexing",
+  "version": "0.1",
+
+  "description": "The perpus of this add-on is to augment the boring folder index page",
+
+  "icons": {
+    "48": "icons/beasts-48.png"
+  },
+
+  "permissions": [
+    "activeTab"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.eblifeguard.org/image/"],
+      "js": ["main.js"]
+    }
+  ],
+
+  "web_accessible_resources": [
+    "awi-images/load.gif"
+  ]
+
+}
